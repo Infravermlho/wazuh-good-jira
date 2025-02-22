@@ -1,0 +1,26 @@
+rule_id: # Rule ids should be strings!
+  default:
+    project:
+      id: "10110"
+    summary: |
+      "${rule.description}"
+    description: |
+      *${rule.description}*
+      >Operação: ${data.office365.Operation}
+      >${data.office365.SourceFileName}
+      *Groups:* ${rule.groups}
+      *Rule:* ${rule.id} (Level ${rule.level})
+      *Agent:* ${agent.name} (${agent.id})
+      *Local:* ${GeoLocation.country_name}
+
+  "91537":
+    summary: |
+      "${rule.description}"
+    description: |
+      *${rule.description}*
+      >Operação: ${data.office365.Operation}
+      >${data.office365.SourceFileName}
+      *Groups:* ${rule.groups}
+      *Rule:* ${rule.id} (Level ${rule.level})
+      *Agent:* ${agent.name} (${agent.id})
+      *Local:* ${GeoLocation.country_name}
